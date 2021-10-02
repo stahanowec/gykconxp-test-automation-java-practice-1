@@ -12,13 +12,8 @@ public class MainTest {
 
     @Test(dataProvider = "task1DataProvider")
     public void ifTask1ThenSuccess(int currentValue, int expectedValue) {
-        //given
-        var current = currentValue;
-        var expected = expectedValue;
-        //when
-        var result = Main.task1(current);
-        //then
-        assertEquals(result, expected);
+        var result = Main.task1(currentValue);
+        assertEquals(result, expectedValue);
     }
 
     @Test
@@ -39,7 +34,6 @@ public class MainTest {
         //when
         //then
         assertThrows(UnsupportedOperationException.class, () -> Main.task2(current));
-
     }
 
     @DataProvider(name = "task1DataProvider")
